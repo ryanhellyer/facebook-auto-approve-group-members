@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Facebook Auto Approve Group Members settings</title>
+</head>
+<body>
+
+<h4>Facebook Auto Approve Group Members settings</h4>
+
+<p>
+	<label>Group ID</label>
+	<br />
+	<input type="text" id="facebook_group_id" placeholder="enter a Facebook group ID here" value="" />
+</p>
+
+<p>
+	<label>Refresh delay (minutes)</label>
+	<br />
+	<input type="number" id="facebook_refresh_delay" min="1" max="480" value="" />
+</p>
+
+<p>
+	<label>Sleep range</label>
+	<br />
+	<label>Start</label> <input type="number" id="facebook_sleep_start" min="1" max="24" value="" />:00
+
+	<br />
+	<label>End</label> <input type="number" id="facebook_sleep_end" min="1" max="24" value="" />:00
+</p>
+
+<p>
+	<label>Last time page was processed</label>
+	<br />
+	<div id="facebook_log">Nothing has ever been logged</div>
+</p>
+
+<p id="status"></p>
+<button id="save">Save</button>
+
+<p>
+	You need to have the processing tab open, for it to process sign-ups.
+</p>
+<p>
+	<a id="button" target="_blank" href="#">Load processing tab</a>
+</p>
+
+<script src="options.js"></script>
+</body>
+</html>

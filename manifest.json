@@ -1,0 +1,38 @@
+{
+	"name": "Facebook Auto Approve Group Members",
+	"version": "0.2",
+	"manifest_version": 2,
+	"description": "Auto approves Facebook group members",
+	"homepage_url": "https://geek.hellyer.kiwi/",
+/*
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": true
+	},
+*/
+ 	"browser_action": {
+			"default_icon": {
+				"16": "icons/icon16.png",
+				"48": "icons/icon48.png",
+				"128": "icons/icon128.png"
+			},
+			"default_title": "Facebook Auto Approve Group Members",
+			"default_popup": "options.html"
+	},
+	"permissions": [
+		"https://m.facebook.com/",
+		"storage"
+//		"background",
+//		"tabs"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"https://m.facebook.com/groups/*/madminpanel/requests/*"
+			],
+			"js": [
+				"auto-approve.js"
+			]
+		}
+	]
+}
